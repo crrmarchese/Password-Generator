@@ -1,12 +1,21 @@
 /*================= GLOBAL ==================*/
-body {
-    font-family: 'Arimo', sans-serif;
+:root {
+  --accent-color: #e9532e;
+  --dk-accent-color :#e44119;
 }
 
-h1{
+body {
+    font-family: 'Arimo', sans-serif;
+    background-color: #011c39;
+}
+
+h1 {
     font-weight: 700;
 }
 
+.text--white {
+    color: var(--bs-white);
+}
 /*================= MAIN ==================*/
 #pw-generator-results {
     background-color: #ccc;
@@ -21,10 +30,9 @@ h1{
 
 #pw-generator-customizer .form-check {
     font-size: 1.125rem;
+    margin-bottom: .625rem;
 }
-/* #pw-number-slider {
-    line-height: 1.5625rem;
-} */
+
 #number-range-output {
     width: 4rem; 
     display: inline-block;
@@ -35,7 +43,7 @@ h1{
 
 /* The slider itself */
 .slider {
-    /* -webkit-appearance: none; */
+    -webkit-appearance: none;
     width: 75%;
     height: 1.125rem;
     background-color: #e9e9e9;
@@ -45,7 +53,7 @@ h1{
     border-radius: .3125em;
     font-weight: 700;
     outline: none;
-    opacity: 0.7;
+    opacity: 0.8;
     -webkit-transition: .2s;
     transition: opacity .2s;   
   }
@@ -56,12 +64,12 @@ h1{
 
   /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
   .slider::-webkit-slider-thumb {
-    /* -webkit-appearance: none;
-    appearance: none; */
+    -webkit-appearance: none;
+    appearance: none;
     width: 30px;
     height: 30px;
     /* background-color: #4CAF50; */
-    background-color: #f6f6f6;
+    background-color: #eb6645;
     cursor: pointer;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
@@ -73,7 +81,7 @@ h1{
     width: 30px;
     height: 30px;
     /* background-color: #4CAF50; */
-    background-color: #f6f6f6;
+    background-color:#eb6645;
     cursor: pointer;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
@@ -82,5 +90,19 @@ h1{
   }
   .form-check-input[type=checkbox] {
     font-size: larger;
+  }
+  
+  .form-check-input[type=checkbox]:checked {
+    background-color: var(--accent-color);
+    border-color: var(--dk-accent-color);
+  }
+
+  .btn--custom {
+    background-color: var(--accent-color);
+  }
+
+  .btn.btn--custom:hover {
+    background-color: var(--dk-accent-color);
+    color: var(--bs-white);
   }
  
