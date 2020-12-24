@@ -1,11 +1,4 @@
 /*================= GLOBAL ==================*/
-root {
-    --shadow {
-        -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
-        -moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
-        box-shadow: 0 1px 3px rgba(0,0,0,.15);
-    }
-}
 body {
     font-family: 'Arimo', sans-serif;
 }
@@ -21,6 +14,11 @@ h1{
     margin-bottom: 2rem;
 }
 
+#pw-generator-customizer {
+  display: inline-flex;
+  flex-direction: column;
+}
+
 #pw-generator-customizer .form-check {
     font-size: 1.125rem;
 }
@@ -31,6 +29,8 @@ h1{
     width: 4rem; 
     display: inline-block;
     margin-right: .25rem;
+    text-align: center;
+    font-weight: 700;
 }
 
 .slider {
@@ -56,17 +56,29 @@ h1{
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 1.5625rem;
-    height: 1.5625rem;
-    background: #4CAF50;
+    width: 30px;
+    height: 30px;
+    /* background-color: #4CAF50; */
+    background-color: #f6f6f6;
     cursor: pointer;
-    box-shadow: var(--shadow); 
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    border-radius: 5px;
   }
   
-  .slider::-webkit-slider-thumb, .slider::-moz-range-thumb {
-    width: 1.5625rem;
-    height: 1.5625rem;
-    background: #4CAF50;
+  .slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    /* background-color: #4CAF50; */
+    background-color: #f6f6f6;
     cursor: pointer;
-    box-shadow: var(--shadow);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    border-radius: 5px;
   }
+  .form-check-input[type=checkbox] {
+    font-size: larger;
+  }
+ 
