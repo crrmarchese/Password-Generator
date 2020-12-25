@@ -1,10 +1,22 @@
 // Assignment Code
+var lengthEl = document.querySelector("#number-range-output").value;
+var uppercaseEl = document.querySelector("#uppercase-letters");
+var lowercaseEl = document.querySelector("lowercase-letters");
+var numbersEl = document.querySelector("#numbers");
+var symbolsEl = document.querySelector("#symbols");
 var generateBtn = document.querySelector("#generate");
+
+// Data
+var txtUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var txtLowerCase = txtUpperCase.toLowerCase();
+var txtNumbers = "0123456789";
+var txtSymbols = "!#$%&()*+-/<=>?@[\]^_{|}~";
+
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#pw-generator-results");
 
   passwordText.value = password;
 
