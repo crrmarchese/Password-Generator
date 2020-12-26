@@ -24,6 +24,12 @@ h1 {
     background-color: #ccc;
     padding: .75rem;
     margin-bottom: 2rem;
+    /* If using copy button keep below */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #pw-generator-customizer {

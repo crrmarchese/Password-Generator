@@ -1,5 +1,5 @@
 // Assignment Code (DOM Elements)
-var lengthEl = document.querySelector("#number-range-output").value;
+var pwlengthEl = document.querySelector("#number-range-output").value;
 var uppercaseEl = document.querySelector("#uppercase-letters");
 var lowercaseEl = document.querySelector("lowercase-letters");
 var numbersEl = document.querySelector("#numbers");
