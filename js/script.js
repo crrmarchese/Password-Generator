@@ -1,7 +1,7 @@
 // Assignment Code (DOM Elements)
-var pwlengthEl = document.querySelector("#number-range-output").value;
+var pwlengthEl = document.querySelector("#number-range-output");
 var uppercaseEl = document.querySelector("#uppercase-letters");
-var lowercaseEl = document.querySelector("lowercase-letters");
+var lowercaseEl = document.querySelector("#lowercase-letters");
 var numbersEl = document.querySelector("#numbers");
 var symbolsEl = document.querySelector("#symbols");
 var generateBtn = document.querySelector("#generate");
@@ -28,6 +28,16 @@ function getRandomSymbols() {
   return txtSymbols[Math.floor(Math.random() * txtSymbols.length)];
 }
 
+//Get values based on user selections
+function generatePassword() {
+  var pwlengthRange = +pwlengthEl.value;
+  var upperCaseOption = uppercaseEl.checked;
+  var lowerCaseOption = lowercaseEl.checked;
+  var numbersOption = numbersEl.checked;
+  var symbolsOption = symbolsEl.checked;
+
+  console.log(pwlengthRange, upperCaseOption, lowerCaseOption, numbersOption, symbolsOption);
+}
 
 
 // Write password to the #password input
