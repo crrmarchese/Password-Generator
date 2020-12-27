@@ -4,7 +4,6 @@
   --secondary-dark-navy: #01284f;
   --accent-color: #e9532e;
   --dk-accent-color :#e44119;
-  
 }
 
 body {
@@ -16,8 +15,12 @@ h1 {
     font-weight: 700;
 }
 
-.text--white {
-    color: var(--bs-white);
+.fa-3x {
+  font-size: 2.25rem;;
+}
+
+.background-dark {
+  background-color: var(--secondary-dark-navy);
 }
 /*================= MAIN ==================*/
 #pw-generator-results {
@@ -116,4 +119,37 @@ h1 {
     background-color: var(--dk-accent-color);
     color: var(--bs-white);
   }
+
+  /*================= MEDIA QUERIES ==================*/
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.fa-3x {
+    font-size: 3rem;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+
+}
  
