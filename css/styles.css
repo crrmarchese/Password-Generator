@@ -26,17 +26,27 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
+.ff-serif {
+  font-family: 'Arvo', serif;
+}
 /*================= MAIN ==================*/
 #pw-generator-wrapper {
-    background-color: #ccc;
+    background-color: #ededed;
     padding: .5rem;
     margin-bottom: 2rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
     /* If using copy button keep below */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+}
+
+#pw-generator-results{
+  font-size: 1.875rem;
 }
 
 #form-pw-number-slider .text-uppercase {
