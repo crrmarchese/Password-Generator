@@ -66,11 +66,12 @@ generateBtn.addEventListener("click", function() {
 });
 
 function generatePassword() {
-  // Set empty password variable
-   let password = "";
 
   // Set empty variable for a combination of all checked/selected character types
   let allAvailableChars = "";
+
+   // Set empty password variable
+   let password = "";
  
  // Get the length and checkbox values based on user selections
   let pwlengthRange = parseInt(pwlengthInput.value);
@@ -91,21 +92,23 @@ function generatePassword() {
   if (symbolsOption === true) {
     allAvailableChars += txtSymbols;
   }
-  //  console.log(allAvailableChars);
+  // console.log(allAvailableChars);
   
-};
+  //Create loop for password characters
+  for(let i = 0; i <= pwlengthRange; i++) {
+    password += allAvailableChars[Math.floor(Math.random() * allAvailableChars.length)];
+  }
 
-//Create loop for password characters
-//for(let i = 0; i <= pwlengthRange; i++) {
+    //  console.log(password);
+  }
 
-//}
+
 
 // Write password to the pw results field
 // function writePassword() {
 //     var password = generatePassword();
 //     var passwordText = pwresultsField;
   
-//     passwordText.value = password;
-  
-// }
+//     passwordText.value = password;  
+//}
 
