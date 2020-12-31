@@ -14,27 +14,6 @@ let txtLowerCase = "abcdefghijklmnopqrstuvwxyz";
 let txtNumbers = "0123456789";
 let txtSymbols = "!#$%&()*+-/<=>?@[]^_{|}~";
 
-// Randomize functions for letters/numbers/symbols
-// function getRandomUpperCase() {
-//   let txtUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//   return txtUpperCase[Math.floor(Math.random() * txtUpperCase.length)];
-// }
-
-// function getRandomLowerCase() {
-//   let txtLowerCase = "abcdefghijklmnopqrstuvwxyz";
-//   return txtLowerCase[Math.floor(Math.random() * txtLowerCase.length)];
-// }
-
-// function getRandomNumbers() {
-//   let txtNumbers = "0123456789";
-//   return txtNumbers[Math.floor(Math.random() * txtNumbers.length)];
-// }
-
-// function getRandomSymbols() {
-//   let txtSymbols = "!#$%&()*+-/<=>?@[]^_{|}~";
-//   return txtSymbols[Math.floor(Math.random() * txtSymbols.length)];
-// }
-
 // Custom Range Slider
 
 // Range slider control ID
@@ -79,7 +58,7 @@ function generatePassword() {
   let lowerCaseOption = lowercaseChBox.checked;
   let numbersOption = numbersChBox.checked;
   let symbolsOption = symbolsChBox.checked;
-  // console.log(pwlengthRange, upperCaseOption, lowerCaseOption, numbersOption, symbolsOption);
+  
   if (upperCaseOption === true) {
     allAvailableChars += txtUpperCase;
   }
@@ -92,24 +71,35 @@ function generatePassword() {
   if (symbolsOption === true) {
     allAvailableChars += txtSymbols;
   }
-  // console.log(allAvailableChars);
   
-  //Create loop for password characters
+  //Create loop for password characters and display final pw on page
   for(let i = 0; i <= pwlengthRange; i++) {
     password += allAvailableChars[Math.floor(Math.random() * allAvailableChars.length)];
     pwresultsField.innerText = password;
   }
+ 
+}
 
-    //  console.log(password);
+// Copy pw to clipboard
+copyBtn.addEventListener("click", function() {
+  // Create <textarea> to append to document and set its value to the pw string
+  let pwtextarea = document.createElement('textarea');
+  let passwordChars = pwresultsField.innerText;
+
+  // Stop the page from refreshing if copy is clicked and no pw 
+  if(passwordChars === "") {
+    return;
   }
 
-
-
-// Write password to the pw results field
-// function writePassword() {
-//     var password = generatePassword();
-//     var passwordText = pwresultsField;
-  
-//     passwordText.value = password;  
-//}
+  // Append <textarea> to HTML document and select the contents of <textarea>
+  pwtextarea.value = passwordChars;
+  document.body.appendChild(pwtextarea);
+  pwtextarea.select();
+  // Use the copy command to copy the contents of <textarea> to clipboard
+  document.execCommand("copy");
+  //Remove the <textarea> from the document
+  pwtextarea.remove();
+  // Alert message
+  alert("Password copied!");
+});
 
