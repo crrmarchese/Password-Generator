@@ -10,6 +10,8 @@ Create a password generator tool that the user can select the following criteria
 
 ## URL
 
+https://crrmarchese.github.io/Password-Generator/
+
 ## CREDIT
 
 Inspiration from the LastPass Generator which I have been using for over 5 years for my random, secure passwords.
