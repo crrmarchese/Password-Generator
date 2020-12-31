@@ -25,6 +25,7 @@ h1 {
 .dark-shadow {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
+
 /*================= MAIN ==================*/
 #pw-generator-wrapper {
     background-color: #ccc;
@@ -36,6 +37,10 @@ h1 {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+}
+
+#form-pw-number-slider .text-uppercase {
+    letter-spacing: .05rem;
 }
 
 #pw-generator-customizer {
