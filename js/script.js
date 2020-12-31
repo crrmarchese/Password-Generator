@@ -103,4 +103,3 @@ copyBtn.addEventListener("click", function() {
   alert("Password copied!");
 
 });
-
