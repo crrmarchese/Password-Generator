@@ -97,6 +97,7 @@ function generatePassword() {
   //Create loop for password characters
   for(let i = 0; i <= pwlengthRange; i++) {
     password += allAvailableChars[Math.floor(Math.random() * allAvailableChars.length)];
+    pwresultsField.innerText = password;
   }
 
     //  console.log(password);
