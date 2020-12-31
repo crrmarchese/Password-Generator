@@ -8,7 +8,7 @@ let symbolsChBox = document.querySelector("#symbols");
 let generateBtn = document.querySelector("#generate");
 let copyBtn = document.querySelector("#copy");
 
-//Create variables for characters
+//Create variables for character types
 let txtUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let txtLowerCase = "abcdefghijklmnopqrstuvwxyz";
 let txtNumbers = "0123456789";
@@ -101,5 +101,6 @@ copyBtn.addEventListener("click", function() {
   pwtextarea.remove();
   // Alert message
   alert("Password copied!");
+
 });
 
