@@ -15,10 +15,6 @@ h1 {
     font-weight: 700;
 }
 
-/* .fa-3x {
-  font-size: 2.25rem;;
-} */
-
 .background-dark {
   background-color: var(--secondary-dark-navy);
 }
@@ -37,7 +33,6 @@ h1 {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-    /* If using copy button keep below */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -46,7 +41,7 @@ h1 {
 }
 
 #pw-generator-results{
-  font-size: 1.875rem;
+  font-size: 1.625rem;
 }
 
 #form-pw-number-slider .text-uppercase {
@@ -99,7 +94,6 @@ h1 {
     appearance: none;
     width: 30px;
     height: 30px;
-    /* background-color: #4CAF50; */
     background-color: var(--accent-color);
     cursor: pointer;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
@@ -111,7 +105,6 @@ h1 {
   .slider::-moz-range-thumb {
     width: 30px;
     height: 30px;
-    /* background-color: #4CAF50; */
     background-color: var(--accent-color);
     cursor: pointer;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
@@ -156,9 +149,9 @@ No media query for `xs` since this is the default in Bootstrap */
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    /* .fa-3x {
-      font-size: 3rem;
-    } */
+  #pw-generator-results{
+    font-size: 1.875rem;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
